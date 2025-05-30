@@ -1,55 +1,94 @@
----
+// VORTIX — موقع مصغر
 
-# موقع رسمي لخادم VORTIX
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Sparkles, Crown, Users, LogIn, LayoutDashboard, MessageCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-مرحبًا بكم في الصفحة الرسمية لخادم VORTIX — مجتمع نابض بالحياة يجمع بين الترفيه، الألعاب، الفن، التفاعل، والنمو الشخصي ضمن بيئة مزخرفة واحترافية.
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-950 to-blue-900 text-white p-6">
+      <motion.h1
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-4xl md:text-6xl font-bold text-center mb-6 text-blue-200 drop-shadow-lg"
+      >
+        ✦ تم افتتاح خادم VORTIX ✦
+      </motion.h1>
 
-![VORTIX Banner](https://cdn.discordapp.com/attachments/1139381139113218098/1244231457481416714/ChatGPT_Image_26.png)
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.8 }}
+        className="grid md:grid-cols-3 gap-6"
+      >
+        <Card className="bg-blue-950/60 backdrop-blur border border-blue-600 shadow-xl">
+          <CardContent className="p-4 space-y-3">
+            <h2 className="text-xl font-semibold flex items-center gap-2 text-blue-100">
+              <Crown className="text-yellow-400" size={20}/> الرتب
+            </h2>
+            <ul className="list-disc ml-6 text-blue-200">
+              <li>✦ founder - 𓆩𖤐𓆪</li>
+              <li>✿ co-owner - 𖦹</li>
+              <li>✧ head admin - ⟡</li>
+              <li>⋯ والمزيد</li>
+            </ul>
+          </CardContent>
+        </Card>
 
-🔗 **انضم إلينا:** [اضغط هنا لدخول السيرفر](https://discord.gg/wFs3ukmx)
+        <Card className="bg-blue-950/60 backdrop-blur border border-blue-600 shadow-xl">
+          <CardContent className="p-4 space-y-3">
+            <h2 className="text-xl font-semibold flex items-center gap-2 text-blue-100">
+              <LayoutDashboard className="text-green-400" size={20}/> أهم الغرف
+            </h2>
+            <ul className="list-disc ml-6 text-blue-200">
+              <li>V・🎀・roles・𖠌</li>
+              <li>V・🕷️・rules・人</li>
+              <li>V・💬・general-chat・彡</li>
+              <li>V・🎁・giveaways・ト</li>
+              <li>⋯ والمزيد</li>
+            </ul>
+          </CardContent>
+        </Card>
 
----
+        <Card className="bg-blue-950/60 backdrop-blur border border-blue-600 shadow-xl">
+          <CardContent className="p-4 space-y-3">
+            <h2 className="text-xl font-semibold flex items-center gap-2 text-blue-100">
+              <Users className="text-pink-400" size={20}/> الرُتب التفاعلية
+            </h2>
+            <ul className="list-disc ml-6 text-blue-200">
+              <li>⟡ member - ˖</li>
+              <li>✿ active - ❁</li>
+              <li>✺ engaged - ☽</li>
+              <li>✧ community pillar - ⊹</li>
+              <li>⋯ وهكذا</li>
+            </ul>
+          </CardContent>
+        </Card>
+      </motion.div>
 
-## ⭐ أفضل 10 أعضاء للشهر
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.2, duration: 0.8 }}
+        className="mt-12 text-center"
+      >
+        <p className="text-blue-200 mb-4 text-lg">انضم إلينا وكن جزءًا من تجربة خيالية ✧</p>
+        <Button className="bg-gradient-to-r from-purple-700 to-blue-600 shadow-xl hover:scale-105 transition">
+          <LogIn className="mr-2" size={18}/> دعوة إلى الخادم
+        </Button>
+      </motion.div>
 
-1. **@AegonX** – 14800 نقطة تفاعل 🔥  
-2. **@M!rage** – 13400 نقطة  
-3. **@Evelynn** – 12200 نقطة  
-4. **@4LONE** – 12000 نقطة  
-5. **@GhostFire** – 11900 نقطة  
-6. **@Noctura** – 11700 نقطة  
-7. **@Rico** – 11300 نقطة  
-8. **@Zen** – 11000 نقطة  
-9. **@Shayko** – 10800 نقطة  
-10. **@PixelRush** – 10400 نقطة
-
-> 🌟 يتم تحديث هذه القائمة تلقائيًا كل شهر حسب نظام المستويات!
-
----
-
-## 🛡️ أفضل 3 إداريين للشهر
-
-🏆 **@Eve (مديرة الفريق)** – لإنجاز 23 مهمة ومتابعة 5 فعاليات بنجاح.
-🥈 **@Legend** – لإعداد أنظمة الرد التلقائي وحل 46 تذكرة دعم.
-🥉 **@Ryu** – لتقديم 12 فكرة تطويرية وتحفيز الأعضاء الجدد.
-
-> 💼 يتم تقييم الأداء الإداري بناءً على النشاط، التفاعل، والإنجازات الشهرية.
-
----
-
-## 🌀 ما يميز سيرفر VORTIX؟
-
-- 💬 نظام محادثات منظم ومزخرف
-- 🎨 مناطق للفن والقصص والمواهب
-- 🎮 مركز ألعاب وتحديات ومسابقات
-- 🔒 دعم فني سريع ونظام تذاكر آلي
-- 🎉 فعاليات أسبوعية، QOTD، مسابقات شهرية
-
----
-
-## 📩 تواصل معنا
-
-لأي استفسار أو اقتراح، يمكنك استخدام [نظام التذاكر](https://discord.gg/wFs3ukmx).
-
-> **VORTIX** — حيث يبدأ التفاعل الحقيقي 💥
-# VORTIX-SITE
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.5, duration: 0.8 }}
+        className="mt-16 text-center text-sm text-blue-400"
+      >
+        ⛧ VORTIX COMMUNITY © 2025 — تم التطوير بحب من أجلكم
+      </motion.div>
+    </div>
+  );
+}
